@@ -1,0 +1,145 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.slide {
+    width: 70%;
+    height: 70%;
+    background-color: rgb(174, 174, 174);
+    overflow: hidden;
+    position: absolute;
+    transform: translate(0,0);
+    transition: all 0.5s;
+}
+
+.slide div {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    position: absolute;
+    top: 0;
+    transform: translate(0,0);
+    transition: all 0.5s ease;
+}
+
+
+.slide div .details {
+    width: 400px;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.slide div .details h1 {
+    animation: anim 0.5s ease;
+    transition: all 0.5s;
+}
+
+.slide div .details p {
+    animation: anim 0.9s ease;
+    transition: all 0.9s;
+}
+
+
+@keyframes anim {
+    from {
+        transform: translateY(30px);
+
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.slide div:nth-child(1) {
+    width: 100%;
+    height: 100%;
+    z-index: 1111;
+    position: absolute;
+    top: 0;
+    right:0;
+}
+.slide div .details:nth-child(1){
+    width: 400px;
+    height: 100%;
+    padding: 10px;
+    position: absolute;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.slide div .details:nth-child(1){
+    animation: anim 0.5s ease;
+    transition: all 0.5s;
+}
+.slide div .details:nth-child(1){
+    animation: anim 0.9s ease;
+    transition: all 0.9s;
+}
+
+
+
+.slide div:nth-child(2) {
+    width: 120px;
+    height: 200px;
+    z-index: 1111;
+    position: absolute;
+    top: 50%;
+    right: 35%;
+}
+
+.slide div:nth-child(2) .details {
+    display: none;
+}
+
+.slide div:nth-child(3) {
+    width: 120px;
+    height: 200px;
+    z-index: 1111;
+    position: absolute;
+    top: 50%;
+    right: 20%;
+}
+
+.slide div:nth-child(3) .details {
+    display: none;
+}
+
+.slide div:nth-child(4) {
+    width: 120px;
+    height: 200px;
+    z-index: 1111;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+}
+
+.slide div:nth-child(4) .details {
+    display: none;
+}
